@@ -1,0 +1,75 @@
+/* Genel container stil tanımı */
+body {
+        background-image: url('bg2.jpg');
+        background-size: cover; /* Arka plan resminin pencere boyutuna oturtulması */
+        background-position: center; /* Arka plan resminin ortalanması */
+        background-repeat: no-repeat; /* Arka plan resminin tekrarlanmaması */
+        background-attachment: fixed; /* Arka planın sabit kalması (isteğe bağlı) */
+}
+.container {
+    position: relative; /* Container'ı relative pozisyon yapalım */
+    max-width: 500px;
+    margin: 2% auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden; /* Görüntü dışındaki içerikleri keselim */
+}
+
+.container::before {
+    content: "";
+    background: url('bg3.jpg') center/contain no-repeat fixed; /* Görüntüyü ayarlayalım */
+    opacity: 0.9; /* Opaklık derecesi (0.1) */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; /* Arka plandan sonra gelecek şekilde dizayn edelim */
+    border-radius: 10px; /* Kenar yarıçapını ayarlayalım */
+}
+
+/* Başlık stil tanımı */
+.logo {
+    border-radius: 10px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.397);
+    font-size: 48px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Kategori bağlantıları için stil tanımı */
+.link {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 24px;
+    font-weight:500;
+    color: rgb(255, 255, 255);
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition:  0.3s ease;
+}
+
+.link:hover {
+    background-color: #00000080;
+    color: #fff;
+}
+
+/* Row stili (isteğe bağlı) */
+.row {
+    background: rgba(0, 0, 0, 0.362);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.074);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.row:hover {
+    transform: translateY(-5px);
+}

@@ -1,0 +1,83 @@
+/* Genel sayfa stil ayarları */
+body {
+    background-image: url('bg3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif; /* Varsayılan font ayarları */
+}
+
+/* Menü kartları container */
+.menu-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px; /* Kartlar arası boşluk */
+}
+
+/* Menü kartı stil ayarları */
+.menu-card {
+    width: calc(33.33% - 20px); /* Kartların genişliği */
+    margin: 10px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: #ffffff; /* Kart arka plan rengi */
+    text-align: center; /* Metinleri ortala */
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.menu-card img {
+    width: 100%;
+    height: 220px;
+    display: block;
+    border-top-left-radius: 12px; /* Köşe yuvarlaklığı */
+    border-top-right-radius: 12px;
+    object-fit: cover; /* Resimlerin boyutu */
+}
+
+/* Menü detayları */
+.menu-details {
+    padding: 20px;
+}
+
+.menu-details h3 {
+    margin-top: 0;
+    font-size: 2rem; /* Başlık boyutu artırıldı */
+    color: #333; /* Başlık rengi */
+}
+
+.menu-details .menu-description {
+    font-size: 1.2rem; /* Açıklama boyutu */
+    color: #666; /* Açıklama rengi */
+    margin-bottom: 10px;
+}
+
+.menu-details .menu-price {
+    font-size: 1.6rem; /* Fiyat boyutu artırıldı */
+    font-weight: bold;
+    color: #ff6600; /* Fiyat rengi */
+}
+
+/* Tablet için medya sorgusu (max-width: 768px) */
+@media (max-width: 768px) {
+    .menu-card {
+        width: calc(50% - 20px); /* 2 sütun */
+    }
+}
+
+/* Mobil için medya sorgusu (max-width: 480px) */
+@media (max-width: 480px) {
+    .menu-card {
+        width: calc(100% - 20px); /* 1 sütun */
+    }
+}

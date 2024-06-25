@@ -1,0 +1,19 @@
+{% extends "home.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/kategori.css' %}">
+
+<div class="menu-cards">
+    {% for item in aksam_menuleri %}
+    <div class="menu-card">
+        <img src="{{item.img.url}}"alt="Menü Görseli">
+        <div class="menu-details">
+            <h3>{{ item.name }}</h3>
+            <p class="menu-price">{{ item.price }} TL</p>
+            <p class="menu-description">{{ item.description }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}
